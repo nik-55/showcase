@@ -1,0 +1,12 @@
+services:
+  frontend:
+    container_name: portfolio_frontend
+    image: portfolio_frontend:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./css:/app/css
+      - ./js:/app/js
+      - ./index.html:/app/index.html
+      - ./scss:/app/scss
